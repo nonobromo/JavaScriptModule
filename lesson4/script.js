@@ -43,9 +43,12 @@ function login() {
     const password = "a123";
     let userValue = document.getElementById("username").value;
     let passValue = document.getElementById("password").value;
+    const output2 = document.getElementById("output2");
     if (username == userValue && password == passValue) {
-        document.getElementById("output2").innerHTML = "ברוך הבא";
+        output2.innerHTML = "ברוך הבא";
+        output2.style.color = "green";
     } else {
-        document.getElementById("output2").innerHTML = "נסה שוב";
+        output2.innerHTML = "נסה שוב";
+        output2.style.color = "red";
     }
 }
