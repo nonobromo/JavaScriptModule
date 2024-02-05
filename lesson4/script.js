@@ -52,3 +52,32 @@ function login() {
         output2.style.color = "red";
     }
 }
+
+function checkNum() {
+    let inputNum = document.getElementById("someNum");
+
+
+    //אם הערך עבר את 100 איפסנו אותו
+    //אם הערך מתחת ל 0 הגדרנו אותו כ 100
+    //ע"מ לשמור על טווח בין 0 ל 100
+    let num = +inputNum.value;
+
+
+    if (num > 100) {
+        inputNum.value = 0;
+    } else if (num < 0) {
+        inputNum.value = 100;
+    }
+
+    if (num <= 40) {
+        output3.style.backgroundColor = "red";
+    } else if (num <= 60) {
+        output3.style.backgroundColor = "orange";
+    } else if (num <= 80) {
+        output3.style.backgroundColor = "blue";
+    } else if (num <= 100) {
+        output3.style.backgroundColor = "green";
+    } else {
+        output3.style.backgroundColor = ""
+    }
+}
