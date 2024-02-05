@@ -36,5 +36,16 @@ function bestCity() {
     } else if (city == "ראשון לציון") {
         document.getElementById("output1").innerHTML = "טעות!";
     }
+}
 
+function login() {
+    const username = "banana";
+    const password = "a123";
+    let userValue = document.getElementById("username").value;
+    let passValue = document.getElementById("password").value;
+    if (username == userValue && password == passValue) {
+        document.getElementById("output2").innerHTML = "ברוך הבא";
+    } else {
+        document.getElementById("output2").innerHTML = "נסה שוב";
+    }
 }
