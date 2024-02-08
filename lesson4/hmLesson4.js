@@ -27,7 +27,7 @@ function check() {
     const height = document.getElementById("number").value;
     const check = document.getElementById("output5");
 
-    if (age >= 14 || age >= 21 && height > 182) {
+    if ((age >= 14 && age <= 18 || age >= 21 && age <= 26) && height >= 182) {
         check.innerHTML = "you are qualified";
     } else {
         check.innerHTML = "you are not qualified";
