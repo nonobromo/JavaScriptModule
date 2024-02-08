@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
     <title>lesson 5</title>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -15,9 +15,26 @@
     <div class="frame">
 
         <div class="task">
-
+            <div class="task">
+                <button onclick="counter(10)">+10</button>
+                <button onclick="counter(5)">+5</button>
+                <button onclick="counter(1)">+1</button>
+                <span id="count">1</span>
+                <button onclick="counter(-1)">-1</button>
+                <button onclick="counter(-5)">-5</button>
+                <button onclick="counter(-10)">-10</button>
+            </div>
         </div>
 
+        <h2>Servce Function with parameters and returns</h2>
+        <div class="task">
+            <h2>פונקציה שמקבלת 3 מספרים ומחזירה את סיכום שלהם</h2>
+            <button onclick="this.innerHTML = sum(9,8,5)">click</button>
+        </div>
+        <div class="task">
+            <h2>פונקציה המקבלת מספר ומחזירה את המספר כולל מע"מ</h2>
+            <button onclick="this.innerHTML =calcVat(100)">Click Here</button>
+        </div>
     </div>
 </body>
 
