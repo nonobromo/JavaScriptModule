@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="frame">
+            <div class="task">
+                <h2>יש להציג את כל המספרים הזוגיים עד 100 כולל</h2>
+                <p id="output1"></p>
+                <button onclick="task1()">Click</button>
+            </div>
+            <div class="task">
+                <h2>יש לקלוט מספר ולכתוב האם הוא ראשוני</h2>
+                <input type="number" oninput="task2(this)">
+                <span id="output2"></span>
+            </div>
+            <div class="task">
+                <h2>יש לקלוט מספר ולהציג את כל המספרים שמתחתיו כולל</h2>
+                <input type="number" id="num1">
+                <button onclick="task3()">click</button>
+                <p id="output3"></p>
+            </div>
+            <div class="task">
+                <h2>יש לקלוט 2 מספרים ולהציג את המספרים שבניהם</h2>
+                <input type="number" id="num3">
+                <input type="number" id="num4">
+                <button onclick="task4()">click</button>
+                <p id="output4"></p>
+            </div>
+
+            <div class="task">
+                <h2>יש לקלוט מספר ולהציג את כל המחלקים שלו</h2>
+                <input type="number" id="num5" oninput="task5(this)">
+                <p id="output5"></p>
+            </div>
+
+            <div class="task">
+                <h2>יש לקלוט מספר ולחשב את העצרת שלו לכתוב את התרגיל עצמו</h2>
+                <input type="number" id="num6">
+                <button onclick="task6()">click</button>
+                <p id="output6"></p>
+            </div>
+            <div class="task">
+                <h2>יש לקלוט מספר ולפי הכמות שלו להציג כוכביות</h2>
+                <input type="number" id="num7">
+                <button onclick="task7()">click</button>
+            </div>
+            <div class="task">
+                <h2>יש לקלוט מספר ולפי הכמות שלו להציג כוכביות בשורות נפרדות</h2>
+                <input type="number" id="num8">
+                <button onclick="task8()">click</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
