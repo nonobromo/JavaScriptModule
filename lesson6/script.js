@@ -84,7 +84,8 @@ function task6() {
 
     let result = 1;
     let i = 1;
-    let total = result
+
+
     while (i <= num) {
         result *= i;
         i++;
