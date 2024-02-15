@@ -58,23 +58,24 @@ function task4() {
 
     let result = '';
 
-    while (num1 <= num2) {
-        result += num1 + ',';
-        num1++;
+    let start = Math.min(num1, num2);
+    let end = Math.max(num1, num2)
+
+    while (start <= end) {
+        result += start + ',';
+        start++;
     }
     document.getElementById('output4').innerHTML = result;
 }
 
 function task5(el) {
     const num = el.value;
-    let i = 1;
     let result = '';
 
-    while (i <= num) {
+    for (let i = 1; i <= num; i++) {
         if (num % i === 0) {
-            result += i += ' ';
+            result += i + " ";
         }
-        i++;
     }
     document.getElementById('output5').innerHTML = result += ' ';
 }
@@ -82,27 +83,29 @@ function task5(el) {
 function task6() {
     const num = document.getElementById('num6').value;
 
-    let result = 1;
-    let i = 1;
-    let calc = '';
-    while (i <= num) {
-        calc += i + '*';
-        result *= i;
-        i++;
+    let result = '';
+    let calc = 1;
+
+    for (let i = 1; i <= num; i++) {
+        calc *= i;
+        result += i;
+
+        if (i !== num) {
+            result += ' * '
+        }
     }
-    document.getElementById('output6').innerHTML = `${calc} = ${result}`;
+    document.getElementById('output6').innerHTML = `${result} = ${calc}`;
 }
 
 function task7() {
     const num = document.getElementById('num7').value;
 
     let result = '';
-    let i = 1;
 
-    while (i <= num) {
-        result += '*';
-        i++;
+    for (let i = 0; i < num; i++) {
+        result += "*"
     }
+
     document.getElementById('output7').innerHTML = result;
 }
 
@@ -110,11 +113,9 @@ function task8() {
     const num = document.getElementById('num8').value;
 
     let result = '';
-    let i = 1;
 
-    while (i <= num) {
-        result += '*' + '<br>';
-        i++;
+    for (let i = 1; i <= num; i++) {
+        result += "*" + "<br>";
     }
     document.getElementById('output8').innerHTML = result;
 }
