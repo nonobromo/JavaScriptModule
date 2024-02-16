@@ -20,6 +20,21 @@
                 <h2>יש לאפשר לבחור כותרת לאתר</h2>
                 <input type="text" oninput="titleChange(this)">
             </div>
+            <div class="task">
+                <h2>יש לבחור כותרת לאתר מתוך רשימה</h2>
+                <select oninput="titleChange(this.value)">
+                    <option></option>
+                    <option>Facebook</option>
+                    <option>Instagram</option>
+                    <option>Youtube</option>
+                    <option>X</option>
+                    <option>Spotify</option>
+                </select>
+            </div>
+            <div class="task">
+                <h2>לחצן המאפס את הכותרת</h2>
+                <button onclick="titleChange('Lesson 7')">Reset</button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
