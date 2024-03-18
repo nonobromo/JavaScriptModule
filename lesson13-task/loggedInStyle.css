@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(218, 218, 218) !important;
+}
+
+
+
+.nav {
+    background-color: #f1f1f1;
+}
+
+.nav-link {
+    color: #333 !important;
+}
+
+.user-info-cont {
+    width: 400px;
+    height: 200px;
+    background-color: #b4b4b4;
+    margin: auto;
+    inset: 0;
+    position: absolute;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px !important;
+}
+
+.user-stats {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.user-changes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
