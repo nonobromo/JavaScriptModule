@@ -6,7 +6,6 @@ let winX;
 let winO;
 let xScore = 0;
 let oScore = 0;
-
 // לולאה העוברת על כל המשבצות
 divs.forEach(div => {
     // הוספת פונקציה המופעלת בעת לחיצה על אחת המשבצות
@@ -34,6 +33,7 @@ divs.forEach(div => {
         // הפעלת הפונקציה של המחווה הויזואלית
         showTurn();
         checkWinner();
+        checkDraw();
     });
 })
 
@@ -95,12 +95,32 @@ function winner(op, win) {
     op.forEach(x => divs[x].classList.add('win'));
 
     isGameOver = true;
+    resetGame();
 }
+
+function checkDraw() {
+    if (!isGameOver) {
+        let draw = true;
+        divs.forEach(div => {
+            if (div.innerHTML === "") {
+                draw = false;
+            }
+        })
+        if (draw) {
+            isGameOver = true;
+            alert("draw");
+            resetGame();
+            clearTiles();
+        }
+    }
+}
+
 
 function clearTiles() {
     for (const div of divs) {
         div.innerHTML = "";
-        div.style.backgroundColor = "white";
+        div.classList.add("tile");
+        div.classList.remove("win");
     }
 }
 
@@ -131,7 +151,7 @@ btnScore.addEventListener("click", function () {
 
 })
 
-/** 
+/**
 יש לצבור נקודות לכל שחקן
 המנצח הוא הראשון במשחק הבא
 כשמסתיים משחק יש לאפשר להתחיל משחק חדש
